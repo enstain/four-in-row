@@ -1,0 +1,28 @@
+{
+  "name": "four-in-row",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.tsx"
+  },
+  "author": "enstain",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-react": "^7.10.4",
+    "@types/react": "^16.9.48",
+    "ink": "^3.0.4",
+    "react": "^16.13.1",
+    "typescript": "^4.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "ink-select-input": "^4.0.0",
+    "ts-node": "^9.0.0"
+  }
+}
