@@ -5,20 +5,12 @@ import { renderChoices } from './render';
 import SelectColumn from '../SelectColumn/SelectColumn';
 
 const Game = () => {
-	const [board, playerMove, isPlayerMove, isMovePossible, playerWins, computerWins] = useGame();
+	const [board, playerMove, isMovePossible, playerWins, computerWins] = useGame();
 	const isGameOver = !isMovePossible || playerWins || computerWins;
 
 	return (
 		<>
 			<SelectColumn isActive={!isGameOver} items={renderChoices(board)} onSelect={playerMove} />
-			{
-				!isGameOver && (
-					<Text>
-						{ isPlayerMove && 'Its your turn' }
-						{ !isPlayerMove && 'Computer thinks...' }
-					</Text>
-				)
-			}
 			{
 				<Text>
 					{!isMovePossible && !playerWins && !computerWins && 'Board is full'}

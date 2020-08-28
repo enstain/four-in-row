@@ -128,7 +128,7 @@ const SelectColumn: FC<Props> = ({
 				const isSelected = index === selectedIndex;
 
 				return (
-					<Box key={item.key} width={1} marginRight={1} flexDirection="column">
+					<Box key={item.key} width={1} marginRight={2} flexDirection="column">
 						{React.createElement(itemComponent, {...item, isSelected})}
 						{isActive && React.createElement(indicatorComponent, {isSelected})}
 					</Box>

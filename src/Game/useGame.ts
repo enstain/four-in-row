@@ -65,7 +65,7 @@ const useGame = () => {
 		setIsPlayerMove(false);
 	};
   
-  return [board, playerMove, isPlayerMove, isMovePossible, playerWins, computerWins] as const;
+  return [board, playerMove, isMovePossible, playerWins, computerWins] as const;
 }
 
 export default useGame;
