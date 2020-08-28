@@ -5,11 +5,8 @@ import { isNotFull, somebodyWillWinHere, hasSameCoins } from "./columns";
 import { Item } from "../SelectColumn/SelectColumn";
 
 function makeBoard(): Board {
-	let board: Board = {};
-	for (let i=0; i < COLUMNS; i++) {
-		board[i] = [];
-	}
-	return board;
+	return Array(COLUMNS).fill([])
+		.reduce((board, column, index) => ({ ...board, [index]: column }), {});
 }
 
 function getCandidateColumnToInsertCoin(columns: string[][]): string[] {
